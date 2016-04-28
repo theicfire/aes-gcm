@@ -280,7 +280,6 @@ int mbedtls_gcm_starts( mbedtls_gcm_context *ctx,
     size_t i;
     const unsigned char *p;
     size_t use_len, olen = 0;
-    printf("try\n");
 
     /* IV and AD are limited to 2^64 bits, so 2^61 bytes */
     if( ( (uint64_t) iv_len  ) >> 61 != 0 ||
@@ -461,7 +460,6 @@ int mbedtls_gcm_crypt_and_tag( mbedtls_gcm_context *ctx,
 {
     int ret;
 
-    printf("ok go\n");
     if( ( ret = mbedtls_gcm_starts( ctx, mode, iv, iv_len, add, add_len ) ) != 0 ) {
         printf("one\n");
         return( ret );
