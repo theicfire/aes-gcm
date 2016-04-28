@@ -1,6 +1,6 @@
 #include "gcm.h"
+#include "utils.h"
 #include <stdio.h>
-#include <string.h>
 
 static void single_encryption(void) {
     mbedtls_gcm_context ctx;

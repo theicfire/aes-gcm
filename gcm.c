@@ -40,7 +40,7 @@
 
 #include "gcm.h"
 
-#include <string.h>
+#include "utils.h"
 
 #if defined(MBEDTLS_AESNI_C)
 #include "aesni.h"
