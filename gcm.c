@@ -797,6 +797,7 @@ int mbedtls_gcm_self_test( int verbose )
 
             mbedtls_gcm_setkey( &ctx, cipher, key[key_index[i]], key_len );
 
+            /*tag_buf[0] = 0;*/
             ret = mbedtls_gcm_crypt_and_tag( &ctx, MBEDTLS_GCM_DECRYPT,
                                      pt_len[i],
                                      iv[iv_index[i]], iv_len[i],
